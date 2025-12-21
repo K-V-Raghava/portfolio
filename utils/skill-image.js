@@ -71,12 +71,10 @@ export const skillsImage = (skill) => {
       return javascript;
     case 'next js':
       return nextJS;
-    case 'nuxt js':
-      return nuxtJS;
+    
     case 'react':
       return react;
-    case 'svelte':
-      return svelte;
+    
     case 'typescript':
       return typescript;
     case 'vue':
@@ -85,12 +83,8 @@ export const skillsImage = (skill) => {
       return bootstrap;
     case 'bulma':
       return bulma;
-    case 'capacitorjs':
-      return capacitorjs;
-    case 'coffeescript':
-      return coffeescript;
-    case 'memsql':
-      return memsql;
+    
+    
     case 'mongodb':
       return mongoDB;
     case 'mysql':
