@@ -3,8 +3,7 @@ import aws from '../app/assets/svg/skills/aws.svg';
 
 import c from '../app/assets/svg/skills/c.svg';
 import canva from '../app/assets/svg/skills/canva.svg';
-import capacitorjs from '../app/assets/svg/skills/capacitorjs.svg';
-import coffeescript from '../app/assets/svg/skills/coffeescript.svg';
+
 import cplusplus from '../app/assets/svg/skills/cplusplus.svg';
 import csharp from '../app/assets/svg/skills/csharp.svg';
 import css from '../app/assets/svg/skills/css.svg';
@@ -17,13 +16,13 @@ import html from '../app/assets/svg/skills/html.svg';
 import javascript from '../app/assets/svg/skills/javascript.svg';
 
 import matlab from '../app/assets/svg/skills/matlab.svg';
-import memsql from '../app/assets/svg/skills/memsql.svg';
+
 
 import mysql from '../app/assets/svg/skills/mysql.svg';
 import nextJS from '../app/assets/svg/skills/nextJS.svg';
 import nginx from '../app/assets/svg/skills/nginx.svg';
 import numpy from '../app/assets/svg/skills/numpy.svg';
-import nuxtJS from '../app/assets/svg/skills/nuxtJS.svg';
+
 import opencv from '../app/assets/svg/skills/opencv.svg';
 
 import python from '../app/assets/svg/skills/python.svg';
