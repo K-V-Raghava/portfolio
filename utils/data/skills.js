@@ -1,0 +1,28 @@
+export const skillsData = [
+  'HTML',
+  'CSS',
+  'Javascript',
+  //'Node JS',
+  'React',
+  'Next JS',
+  'Docker',
+  'Unity',
+  'MySQL',
+  'C',
+  'C#',
+  'Git',
+  'AWS',
+  'C++',
+  'Python',
+  'Matlab',
+  'Swift',
+  'Numpy',
+  'OpenCV',
+  'Pytorch',
+  'Tensorflow',
+  //'Deep learning'
+  // 'Scikitlearn',
+  // 'Pandas',
+  // 'Kubernetes',
+  // 'FastAPI'
+]
