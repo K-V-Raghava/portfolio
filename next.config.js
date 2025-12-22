@@ -1,26 +1,9 @@
-const path = require('path')
- 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'media.dev.to',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'media2.dev.to',
-        pathname: '**',
-      },
-    ],
+    unoptimized: true,
   },
-}
+};
+
+module.exports = nextConfig; // NOTE: If your file is named .mjs, use "export default nextConfig;" instead
