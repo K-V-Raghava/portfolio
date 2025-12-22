@@ -25,14 +25,14 @@ function HeroSection() {
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10 lg:-ml-10  lg:w-[120%] z-10">
           
-          <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
+          <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.4rem] lg:leading-[3.2rem]">
             Hello, I'm <br />
             <span className="text-[#FFD700] text-3xl lg:text-5xl drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] tracking-wide">
               {personalData.name}
             </span>
           <br />
             I'm a Professional{' '}
-            <span className="font-bold text-[#16f2b3] drop-shadow-[1px_1px_0px_rgba(0,0,0,0.8)]">
+            <span className="font-bold text-[#16f2b3] lg:text-4xl drop-shadow-[1px_1px_0px_rgba(0,0,0,0.8)]">
               {personalData.designation}
             </span>
             .
