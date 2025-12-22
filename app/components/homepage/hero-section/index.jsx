@@ -15,7 +15,7 @@ function HeroSection() {
       {/* <div className="absolute inset-0 -z-10"> */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full -z-10">
         <Image
-          src="/image/xx.jpg" // <--- IMPORTANT: Put your actual image filename here
+          src="/image/xx.jpg" // 
           alt="Hero Background"
           fill // This makes it stretch to fill the container
           className="object-cover opacity-60" // 'opacity-50' makes it darker so text is readable. Adjust as needed (e.g., opacity-30 or opacity-70).
@@ -25,18 +25,28 @@ function HeroSection() {
           {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0d1224] via-transparent to-transparent"></div> */}
       </div>
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem] drop-shadow-lg">
-            {/* Hello, <br /> */}
-            Hi, I'm  {' '}
-            {/* Change text-pink-500 to text-[#FFD700] (Gold) */}
-            <span className="text-[#FFD700] drop-shadow-md">{personalData.name}</span>
-            {` , I'm a Professional `}
-            {/* Change text-[#16f2b3] to text-[#FFD700] (Gold) */}
-            <span className="text-[#FFD700] drop-shadow-md">{personalData.designation}</span>
-            .
+          {/* LEFT COLUMN: Text Content */}
+        {/* Added 'lg:-ml-5' (pull left) and 'lg:w-[110%]' (widen) to fix spacing */}
+        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10 lg:-ml-5 lg:w-[110%] z-10">
+          
+          {/* 1. INTRO & NAME (Gold + Hard Shadow) */}
+          <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
+            Hello, I'm <br />
+            <span className="text-[#FFD700] text-4xl lg:text-6xl drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] tracking-wide">
+              {personalData.name}
+            </span>
           </h1>
-
+        
+          {/* 2. DESIGNATION (Green + Hard Shadow) */}
+          {/* Moved to a separate <p> tag for better spacing */}
+          <p className="mt-6 text-lg md:text-xl lg:text-2xl font-medium text-gray-100 leading-relaxed max-w-[90%]">
+            I'm a Professional{' '}
+            <span className="font-bold text-[#16f2b3] drop-shadow-[1px_1px_0px_rgba(0,0,0,0.8)]">
+              {personalData.designation}
+            </span>
+            .
+          </p>
+        </div>
           <div className="my-12 flex items-center gap-5">
             <Link
               href={personalData.github}
