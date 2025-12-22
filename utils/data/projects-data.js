@@ -1,14 +1,14 @@
 export const projectsData = [
   {
     id: 1,
-    name: 'AI Powered Financial App',
-    slug: 'ai-financial-app', // <--- NEW: Unique URL ID
-    description: "Built an AI app to track expenses...",
+    name: 'Cancer-Detection-Model',
+    slug: 'Cancer-Detection-Model', // <--- NEW: Unique URL ID
+    description: "A machine learning–based cancer detection model designed to analyze medical data (such as imaging, histopathology, or clinical features) to identify patterns indicative of malignant disease. The model leverages supervised learning to distinguish between cancerous and non-cancerous cases, enabling early detection, risk stratification, and decision support for clinicians. It aims to improve diagnostic accuracy, reduce human error, and support timely intervention while complementing, not replacing, clinical judgment.",
     tools: ['React', 'NextJS', 'Tailwind CSS', 'Firebase'],
-    role: 'Full Stack Developer',
-    code: '',
+    role: 'AI ML Engineer',
+    code: 'https://github.com/b23bb1023/Cancer-Detection-Model',
     demo: '',
-    image: '/image/crefin.jpg', // <--- NEW: Path to image (put images in public/image folder)
+    image: '/image/cancer.jpg', // <--- NEW: Path to image (put images in public/image folder)
     domain: 'AI/ML', // <--- NEW: The column category
   },
   {
@@ -23,12 +23,85 @@ export const projectsData = [
     image: '/image/portfolio.png',
     domain: 'Web Dev', // <--- Different domain = Different column
   },
-  // Add more projects...
+  {
+    id: 3,
+    name: 'Route Optimisation (Google Maps Clone)',
+    slug: 'Route-Optimisation',
+    description: "A real-time route optimization algorithm integrated into a web-based application that computes the shortest and most efficient paths using live data. The system dynamically processes factors such as distance, travel time, and routing constraints to deliver optimal navigation results. Paired with a user-friendly interface and interactive map features comparable to Google Maps, it enables seamless route visualization, turn-by-turn guidance, and responsive updates to enhance usability and decision-making.",
+    tools: ['Python', 'C++', 'HTML', 'React'],
+    role: 'Web Developer',
+    code: 'https://github.com/b23bb1023/Route-Optimisation',
+    demo: '',
+    image: '/image/Route.png',
+    domain: 'Web Dev',
+  },
+  {
+    id: 4,
+    name: 'Manhwa Agent Bot',
+    slug: 'Manhwa-agent',
+    description: " An automated offline-first self hosted dashboard that tracks personalised reading list on Asura Scans, utilizes a sophisticated browser emulation layer to get the latest unread chapters via a sleek desktop widget app built with Python (Flet). Automated n8n workflow with docker. Automatic regular update of manhwa configured to open in browser.",
+    tools: ['Python','FastAPI','Playwright', 'n8n', 'Node.js','Flet GUI','Docker'],
+    role: 'Full Stack Developer',
+    code: '',
+    demo: '',
+    image: '/image/Manhwa.png',
+    domain: 'Web Dev',
+  },
+  {
+    id: 5,
+    name: 'Spotify Widget for macOS',
+    slug: 'Spotify_Widget',
+    description: " A macOS widget for spotify using Spotify Developer Api integration and OAuth to get pause , play , current song information and other important features required for a media player widget with Spotify integration for real time usage.",
+    tools: ['Python', 'OAuth 2.0', 'Flask', 'Spotify API','REST API','Web API'],
+    role: 'Product Engineer',
+    code: 'https://github.com/b23bb1023/SpotEase-Spotify-Widget-for-macOS',
+    demo: '',
+    image: '/image/Spotify.png',
+    domain: 'Web Dev',
+  },
+  {
+    id: 6,
+    name: 'Gesture-Based Mouse Control',
+    slug: 'Gesture',
+    description: " This project implements a real-time, touchless human-computer interaction system that allows users to control mouse functions using hand gestures captured through a webcam.",
+    tools: ['Python', 'OpenCV', 'MediaPipe','PyAutoGUI','MySQL','MongoDB'],
+    role: 'Computer Vision Engineer',
+    code: 'https://github.com/b23bb1023/Gesture-Controlled-UI-Navigation-Interface',
+    demo: '',
+    image: '/image/Gesture.png',
+    domain: 'AI/ML',
+  },
+  {
+    id: 7,
+    name: 'Expensentry',
+    slug: 'Expensentry',
+    description: " The Expensentry is a budget and expenditure manager which is based on user comfort and contains some of the essential features for any user to handle their expenses effortlessly and completely by just a few clicks on their devices. It is a c language program focused on easy user interface and simplicity without compromising necessary features.",
+    tools: ['C', 'C++'],
+    role: 'Product Engineer',
+    code: 'https://github.com/b23bb1023/ics_minor_project',
+    demo: '',
+    image: '/image/Expensentry.png',
+    domain: 'Web Dev',
+  },
+  
+
 ];
 
-// Do not remove any property.
-// Leave it blank instead as shown below
-
+/*
+  {
+    id: ,
+    name: 'Personal Portfolio',
+    slug: 'portfolio',
+    description: " website",
+    tools: ['Next.js', 'Tailwind', 'React'],
+    role: 'Frontend Developer',
+    code: '',
+    demo: '',
+    image: '/image/select.png',
+    domain: 'Web Dev',
+  },
+*/
+  
 // {
 //     id: 1,
 //     name: '',
