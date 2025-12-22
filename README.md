@@ -2,7 +2,7 @@
 
 A modern, high-performance developer portfolio website built with **Next.js** and **Tailwind CSS**. This project features a responsive design, dynamic project showcases, and a custom 3D-concept hero section.
 
-![Project Preview](public/image/portfolio.jpg) 
+![Project Preview](public/image/portfolio.png) 
 
 ## 🚀 Features
 
