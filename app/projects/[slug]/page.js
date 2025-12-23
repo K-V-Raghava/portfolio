@@ -1,101 +1,128 @@
-import { projectsData } from '@/utils/data/projects-data';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa';
+import { projectsData } from "@/utils/data/projects-data";
+import Image from "next/image";
+import Link from "next/link";
+import { BiChevronLeft } from "react-icons/bi";
 
-export function generateStaticParams() {
+// Helper function to handle names if no manual slug is provided
+const getSlug = (name) => name.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-");
+
+export async function generateStaticParams() {
   return projectsData.map((project) => ({
-    slug: project.slug,
+    slug: project.slug || getSlug(project.name),
   }));
 }
 
-export default function ProjectDetails({ params }) {
-  const { slug } = params;
-  const project = projectsData.find((p) => p.slug === slug);
+async function ProjectDetails({ params }) {
+  const { slug } = await params;
+
+  const project = projectsData.find((p) => {
+    const manualSlug = p.slug;
+    const generatedSlug = getSlug(p.name);
+    return manualSlug === slug || generatedSlug === slug;
+  });
 
   if (!project) {
     return (
-      <div className="h-screen flex flex-col items-center justify-center text-white bg-[#0d1224]">
-        <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-        <Link href="/#projects" className="text-[#16f2b3] hover:underline">
-          Return to Projects
+      <div className="flex flex-col items-center justify-center h-screen text-white gap-4 bg-[#0d1224]">
+        <h2 className="text-3xl font-bold text-[#FFD700]">Project not found</h2>
+        <Link href="/#projects" className="px-8 py-3 bg-[#1b2c68] rounded-full text-white hover:scale-105 transition-transform">
+          Go Back
         </Link>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#0d1224] text-white pt-24 pb-12">
-      <div className="container mx-auto px-6 md:px-12">
-        
-        {/* Back Button */}
-        <Link href="/#projects" className="inline-flex items-center gap-2 text-[#16f2b3] mb-8 hover:underline pt-20 lg:pt-2">
-          <FaArrowLeft /> Back to Projects
+    // PT-32: Huge top padding to clear the Navbar
+    // WIDER LAYOUT: Using 'px-5' instead of 'px-20' to stretch content to edges
+    <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-32 pb-12 bg-[#0d1224]">
+      
+      {/* TOP BAR */}
+      <div className="max-w-[1250px] mx-auto px-4 lg:px-6 mb-0">
+        <Link
+          href="/#projects"
+          className="flex items-center gap-2 text-[#16f2b3] font-semibold hover:text-white transition"
+        >
+          <BiChevronLeft size={26} />
+          Back to Projects
         </Link>
+      </div>
 
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#16f2b3] mb-6">{project.name}</h1>
+      {/* MAIN CONTENT */}
+      <div className="max-w-[1250px] mx-auto px-4 lg:px-8 flex flex-col gap-10">
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
-          {/* Left Column: Image */}
-          {/* Left Column: Image */}
-            <div className="relative w-full h-[300px] md:h-[450px] rounded-xl overflow-hidden border border-[#2a2e5a] shadow-2xl bg-[#0d1224]">
-            {/* If you have a real image, it shows here */}
-            {project.image ? (
-                <Image 
-                src={project.image} 
-                alt={project.name} 
-                fill 
-                className="object-contain p-4" 
-                />
-            ) : (
-                <div className="w-full h-full bg-[#0d1224] flex items-center justify-center">
-                <span className="text-gray-500">No Image Available</span>
-                </div>
-            )}
-            </div>
-          {/* Right Column: Details */}
-          <div className="flex flex-col gap-6">
-            
-            {/* Description */}
-            <div className="bg-[#1b203e] p-6 rounded-xl border border-[#2a2e5a]">
-              <h3 className="text-xl font-bold mb-4 text-pink-500">Overview</h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
-                {project.description}
-              </p>
+        {/* TITLE */}
+        <h1 className="text-3xl md:text-5xl font-bold text-[#FFD700]">
+          {project.name}
+        </h1>
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+
+          {/* LEFT COLUMN */}
+          <div className="lg:col-span-5 flex flex-col gap-6 h-full">
+
+            {/* CONTRIBUTIONS */}
+            <div className="border border-[#1b2c68a0] bg-[#0d1224]/50 backdrop-blur-md rounded-xl p-6 flex-1">
+              <h2 className="text-xl font-bold text-[#16f2b3] mb-4">
+                Impact
+              </h2>
+
+              {project.highlights?.length ? (
+                <ul className="list-disc ml-5 space-y-2 text-gray-200">
+                  {project.highlights.map((h, i) => (
+                    <li key={i}>{h}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-400 italic">No highlights available.</p>
+              )}
             </div>
 
-            {/* Tools Used */}
-            <div className="bg-[#1b203e] p-6 rounded-xl border border-[#2a2e5a]">
-              <h3 className="text-xl font-bold mb-4 text-pink-500">Tech Stack</h3>
-              <div className="flex flex-wrap gap-3">
+            {/* SKILLS */}
+            <div className="border border-[#1b2c68a0] bg-[#0d1224]/50 backdrop-blur-md rounded-xl p-6 flex-1">
+              <h2 className="text-xl font-bold text-[#16f2b3] mb-4">
+                Skills
+              </h2>
+              <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool, i) => (
-                  <span key={i} className="px-4 py-2 bg-[#0d1224] rounded-full text-sm text-[#16f2b3] border border-[#2a2e5a]">
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-sm bg-[#1b2c68] text-white rounded-full border border-[#2a3e84]"
+                  >
                     {tool}
                   </span>
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Links */}
-            <div className="flex gap-4 mt-4">
-              {project.code && (
-                <Link href={project.code} target="_blank" className="flex items-center gap-2 px-6 py-3 bg-[#16f2b3] text-black font-bold rounded-full hover:scale-105 transition-transform">
-                  <FaGithub size={20} /> View Code
-                </Link>
-              )}
-              {project.demo && (
-                <Link href={project.demo} target="_blank" className="flex items-center gap-2 px-6 py-3 border border-[#16f2b3] text-[#16f2b3] font-bold rounded-full hover:bg-[#16f2b3] hover:text-black transition-all">
-                  <FaExternalLinkAlt size={18} /> Live Demo
-                </Link>
-              )}
-            </div>
-
+          {/* RIGHT COLUMN – FULL VISUAL IMPACT */}
+          <div className="lg:col-span-7 relative min-h-[380px] lg:min-h-[520px] rounded-2xl overflow-hidden border border-[#FFD700]/30 bg-black">
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              priority
+              className="object-contain hover:scale-[1.02] transition-transform duration-500"
+            />
           </div>
         </div>
+
+        {/* ABSTRACT */}
+        <div className="border border-[#1b2c68a0] bg-[#0d1224]/50 backdrop-blur-md rounded-xl p-6 lg:p-10">
+          <h2 className="text-2xl font-bold text-white mb-6 border-b border-[#1b2c68a0] pb-3">
+            Project Abstract & Details
+          </h2>
+          <p className="text-gray-200 text-lg leading-loose whitespace-pre-line">
+            {project.description}
+          </p>
+        </div>
       </div>
-    </div>
+      
+    </section>
+
   );
 }
+
+export default ProjectDetails;
