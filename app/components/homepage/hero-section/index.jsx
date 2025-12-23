@@ -37,7 +37,7 @@ function HeroSection() {
             </span>
             .
           </h1>
-        </div>
+        
           <div className="my-12 flex items-center gap-5">
             <Link
               href={personalData.github}
@@ -96,6 +96,7 @@ function HeroSection() {
               <MdDownload size={16} />
             </Link>
           </div>
+        </div>
           <div className="order-1 lg:order-2 border-[#1b2c68a0] relative rounded-lg border bg-transparent backdrop-blur-sm">  
             <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
