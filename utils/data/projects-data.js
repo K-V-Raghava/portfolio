@@ -8,7 +8,7 @@ export const projectsData = [
     role: 'AI ML Engineer',
     code: 'https://github.com/b23bb1023/Cancer-Detection-Model',
     demo: '',
-    image: '/image/cancer.jpg', // <--- NEW: Path to image (put images in public/image folder)
+    image: '/image/cancer.png', // <--- NEW: Path to image (put images in public/image folder)
     domain: 'AI/ML', // <--- NEW: The column category
   },
   {
