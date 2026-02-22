@@ -4,12 +4,12 @@ export const projectsData = [
     name: 'Cancer-Detection-Model',
     slug: 'Cancer-Detection-Model', // <--- NEW: Unique URL ID
     description: "A machine learning–based cancer detection model designed to analyze medical data (such as imaging, histopathology, or clinical features) to identify patterns indicative of malignant disease. The model leverages supervised learning to distinguish between cancerous and non-cancerous cases, enabling early detection, risk stratification, and decision support for clinicians. It aims to improve diagnostic accuracy, reduce human error, and support timely intervention while complementing, not replacing, clinical judgment.",
-    tools: ['React', 'NextJS', 'Tailwind CSS', 'Firebase'],
+    tools: ['Python', 'Pytorch','CUDA', 'torchvision', 'NumPy', 'OpenCV', 'Scikit-learn','Matplotlib','Pandas','Seaborn','PIL/Pillow'],
     role: 'AI ML Engineer',
     code: 'https://github.com/b23bb1023/Cancer-Detection-Model',
     demo: '',
-    image: '/image/cancer.png', // <--- NEW: Path to image (put images in public/image folder)
-    domain: 'AI/ML', // <--- NEW: The column category
+    image: '/image/cancer.png', 
+    domain: 'AI/ML', // The column category
   },
   {
     id: 2,
@@ -21,14 +21,14 @@ export const projectsData = [
     code: '',
     demo: '',
     image: '/image/portfolio.png',
-    domain: 'Web Dev', // <--- Different domain = Different column
+    domain: 'Web Dev', // 
   },
   {
     id: 3,
     name: 'Route Optimisation (Google Maps Clone)',
     slug: 'Route-Optimisation',
     description: "A real-time route optimization algorithm integrated into a web-based application that computes the shortest and most efficient paths using live data. The system dynamically processes factors such as distance, travel time, and routing constraints to deliver optimal navigation results. Paired with a user-friendly interface and interactive map features comparable to Google Maps, it enables seamless route visualization, turn-by-turn guidance, and responsive updates to enhance usability and decision-making.",
-    tools: ['Python', 'C++', 'HTML', 'React'],
+    tools: ['Python', 'C++','Flask', 'Folium', 'OSMnx', 'HTML', 'React','Geopy','Dijkstra Algorithm','NetworkX','JavaScript'],
     role: 'Web Developer',
     code: 'https://github.com/b23bb1023/Route-Optimisation',
     demo: '',
@@ -40,7 +40,7 @@ export const projectsData = [
     name: 'Manhwa Agent Bot',
     slug: 'Manhwa-agent',
     description: " An automated offline-first self hosted dashboard that tracks personalised reading list on Asura Scans, utilizes a sophisticated browser emulation layer to get the latest unread chapters via a sleek desktop widget app built with Python (Flet). Automated n8n workflow with docker. Automatic regular update of manhwa configured to open in browser.",
-    tools: ['Python','FastAPI','Playwright', 'n8n', 'Node.js','Flet GUI','Docker'],
+    tools: ['Python','FastAPI','Playwright', 'Docker', 'n8n', 'Flet','Uvicorn' ,'Kubernetes'],
     role: 'Full Stack Developer',
     code: '',
     demo: '',
@@ -52,7 +52,7 @@ export const projectsData = [
     name: 'Spotify Widget for macOS',
     slug: 'Spotify_Widget',
     description: " A macOS widget for spotify using Spotify Developer Api integration and OAuth to get pause , play , current song information and other important features required for a media player widget with Spotify integration for real time usage.",
-    tools: ['Python', 'OAuth 2.0', 'Flask', 'Spotify API','REST API','Web API'],
+    tools: ['Python', 'OAuth 2.0', 'Flask', 'Spotify Web API','REST API','Web API'],
     role: 'Product Engineer',
     code: 'https://github.com/b23bb1023/SpotEase-Spotify-Widget-for-macOS',
     demo: '',
@@ -64,7 +64,7 @@ export const projectsData = [
     name: 'Gesture-Based Mouse Control',
     slug: 'Gesture',
     description: " This project implements a real-time, touchless human-computer interaction system that allows users to control mouse functions using hand gestures captured through a webcam.",
-    tools: ['Python', 'OpenCV', 'MediaPipe','PyAutoGUI','MySQL','MongoDB'],
+    tools: ['Python', 'OpenCV', 'MediaPipe','PyAutoGUI','NumPy','Computer Vision','Matplotlib'],
     role: 'Computer Vision Engineer',
     code: 'https://github.com/b23bb1023/Gesture-Controlled-UI-Navigation-Interface',
     demo: '',
