@@ -83,31 +83,30 @@ export const projectsData = [
     image: '/image/Expensentry.png',
     domain: 'Web Dev',
   },
-  
+  {
+    id: 8,
+    name: '3D Motion Tracking System',
+    slug:'3D Motion Tracking System',
+    description: "",
+    tools: ['Python','TensorFlow','Keras','TFLite Micro' , 'Arduino C/C++' , 'NumPy' , 'Pandas' , 'scikit-learn' , 'Matplotlib' , 'Jupyter Notebook'],
+    role: '',
+    code: 'https://github.com/b23bb1023/3D-Motion-Tracking-System',
+    image: '/image/3DMTS.png',
+    domain: 'AI/ML',
+ },
 
 ];
-
-/*
-  {
-    id: ,
-    name: 'Personal Portfolio',
-    slug: 'portfolio',
-    description: " website",
-    tools: ['Next.js', 'Tailwind', 'React'],
-    role: 'Frontend Developer',
-    code: '',
-    demo: '',
-    image: '/image/select.png',
-    domain: 'Web Dev',
-  },
-*/
   
-// {
-//     id: 1,
-//     name: '',
-//     description: "",
-//     tools: [],
-//     role: '',
-//     code: '',
-//     demo: '',
-// },
+/* 
+{
+    id: 9,
+    name: '',
+    slug:'',
+    description: "",
+    tools: [''],
+    role: '',
+    code: '',
+    image: '/image/.png',
+    domain: '',
+ },
+ */
