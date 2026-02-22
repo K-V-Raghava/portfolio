@@ -71,20 +71,9 @@ export const projectsData = [
     image: '/image/Gesture.png',
     domain: 'AI/ML',
   },
+ 
   {
     id: 7,
-    name: 'Expensentry',
-    slug: 'Expensentry',
-    description: " The Expensentry is a budget and expenditure manager which is based on user comfort and contains some of the essential features for any user to handle their expenses effortlessly and completely by just a few clicks on their devices. It is a c language program focused on easy user interface and simplicity without compromising necessary features.",
-    tools: ['C', 'C++'],
-    role: 'Product Engineer',
-    code: 'https://github.com/b23bb1023/ics_minor_project',
-    demo: '',
-    image: '/image/Expensentry.png',
-    domain: 'Web Dev',
-  },
-  {
-    id: 8,
     name: '3D Motion Tracking System',
     slug:'3D Motion Tracking System',
     description: "",
@@ -99,7 +88,7 @@ export const projectsData = [
   
 /* 
 {
-    id: 9,
+    id: 8,
     name: '',
     slug:'',
     description: "",
