@@ -31,7 +31,7 @@ function HeroSection() {
               {personalData.name}
             </span>
           <br />
-            I'm a aspiring {' '}
+            I'm an aspiring {' '}
             <span className="font-bold text-[#16f2b3] lg:text-4xl drop-shadow-[1px_1px_0px_rgba(0,0,0,0.8)]">
               {personalData.designation}
             </span>
