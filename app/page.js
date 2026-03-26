@@ -27,9 +27,9 @@ export default async function Home() {
     <div suppressHydrationWarning className="pt-20 lg:pt-14">
       <HeroSection />
       <AboutSection />
+      <Projects />
       <Experience />
       <Skills />
-      <Projects />
       <Education />
       <ContactSection />
     </div>
