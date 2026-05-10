@@ -35,20 +35,18 @@ function Experience() {
           </div>
 
           <div className="flex flex-col gap-6">
-            {/* Swapped to match the imported 'experiences' variable */}
             {experiences.map((exp) => (
               <div key={exp.id} className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm transition-transform hover:-translate-y-1">
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                    <p className="text-emerald-400 font-medium">{exp.company} • {exp.location}</p>
+                    <p className="text-emerald-400 font-medium">{exp.company} </p>
                   </div>
                   <span className="text-sm text-gray-400 font-mono bg-white/5 px-3 py-1 rounded-full">
                     {exp.duration}
                   </span>
                 </div>
                 
-                {/* Added optional chaining (?.) to prevent crashes on missing data */}
                 <ul className="list-disc list-inside text-gray-300 space-y-2 mt-4">
                   {exp.details?.map((point, index) => (
                     <li key={index} className="text-sm leading-relaxed">
@@ -57,7 +55,6 @@ function Experience() {
                   ))}
                 </ul>
                 
-                {/* Corrected href to use dynamic data from your utils folder */}
                 {exp.certificateLink && (
                   <a 
                     href={exp.certificateLink} 
