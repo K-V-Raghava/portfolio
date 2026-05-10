@@ -91,9 +91,9 @@ function ProjectCard({ project }) {
         <div className="absolute inset-0 bg-[#0d1224]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm z-10">
           
           {/* Conditionally render Live Demo button if link exists */}
-          {project.demoLink && project.demoLink !== "" && (
+          {project.demo && project.demo !== "" && (
             <Link 
-              href={project.demoLink} 
+              href={project.demo} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all hover:scale-105"
@@ -104,9 +104,9 @@ function ProjectCard({ project }) {
           )}
 
           {/* Conditionally render GitHub button if link exists */}
-          {project.githubLink && project.githubLink !== "" && (
+          {project.code && project.code !== "" && (
             <Link 
-              href={project.githubLink} 
+              href={project.code} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 bg-[#1a1443] hover:bg-[#2a225e] border border-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all hover:scale-105"
@@ -121,7 +121,7 @@ function ProjectCard({ project }) {
 
       {/* BOTTOM SECTION: Project Details */}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+        <h3 className="text-xl font-bold text-white mb-3">{project.name}</h3>
         
         {/* Description line-clamp ensures cards stay a uniform height even with long text */}
         <p className="text-sm text-gray-400 mb-5 line-clamp-3 flex-grow">
