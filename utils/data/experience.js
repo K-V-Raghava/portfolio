@@ -4,7 +4,6 @@ export const experienceData = [
     title: "Python Automation Intern (AI, n8n, Web Scraping)",
     company: "Figmenta",
     duration: "March 2026 - April 2026",
-    location: "Hyderabad, India",
     details: [
       "Engineered 15+ production-grade automation workflows handling 6,000+ data points per run for large-scale social platform data processing.",
       "Designed multi-stage ETL pipelines that scraped platform data, stored structured outputs, and triggered API-driven downstream workflows.",
