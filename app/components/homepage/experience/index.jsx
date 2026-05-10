@@ -1,11 +1,12 @@
 // @flow strict
 
-import { experiences } from "@/utils/data/experience";
+import { experienceData } from "@/utils/data/experience";
 import Image from "next/image";
 import experienceAnimation from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
 
 function Experience() {
+  const safeData = experienceData || [];
   return (
     <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
@@ -35,12 +36,13 @@ function Experience() {
           </div>
 
           <div className="flex flex-col gap-6">
-            {experiences.map((exp) => (
+            {/* 3. MAP FIX: Use the safe array we defined above */}
+            {safeData.map((exp) => (
               <div key={exp.id} className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm transition-transform hover:-translate-y-1">
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                    <p className="text-emerald-400 font-medium">{exp.company} </p>
+                    <p className="text-emerald-400 font-medium">{exp.company} • {exp.location}</p>
                   </div>
                   <span className="text-sm text-gray-400 font-mono bg-white/5 px-3 py-1 rounded-full">
                     {exp.duration}
