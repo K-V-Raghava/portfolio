@@ -12,6 +12,6 @@ export const experienceData = [
       "Built dynamic workflow chains to provision R2 storage buckets and serve structured media outputs."
     ],
 
-    certificateLink: "/certificates/figmenta-internship.pdf" 
+    certificateLink: "https://drive.google.com/file/d/16raEzIx297rsGQNZZg5c5aJqfayJm7Ty/view?usp=drive_link"
   }
 ];
