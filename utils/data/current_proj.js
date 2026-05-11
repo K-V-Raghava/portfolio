@@ -23,6 +23,88 @@ export const currentProjects = [
     description: "Architecting a production-ready local AI agent with a three-track execution system (Chat, Plan, Refuse). Utilizing a hybrid memory graph with SQLite for exact state retrieval and Chroma for semantic matching.",
     update: "Successfully implemented the news agent with tool calling and whatsapp interface for chat.",
     image: "",
+  },
+  [
+  {
+    id: 11,
+    title: "AI-Agent",
+    date: "2026-05-07",
+    description: "Built multi agentic system from scratch with local LLM models using LM Studio server.\nUses web search, semantic search, Gmail and Google Calendar API integration.",
+    update: "Security-oriented OpenClaw-style build with WhatsApp prompts and responses. The visible history shows 1 commit, starting with an initial commit on May 7, 2026.",
+    image: ""
+  },
+  {
+    id: 12,
+    title: "Panda_Arts",
+    date: "2026-04-05",
+    description: "Panda Sleep Arts.\nFront-end repo with React/Vite assets and a portfolio-style structure.",
+    update: "Recent work focused on Hero and Work component refactors, project data updates, and background image handling. The visible history shows 41 commits, latest on Apr 5, 2026.",
+    image: ""
+  },
+  {
+    id: 13,
+    title: "MiPa",
+    date: "2026-03-28",
+    description: "Critique and improvement study of Mixed Patch visible-infrared object detection.\nCompares the paper’s training method across CNN and ViT backbones.",
+    update: "Research-oriented notebook/project repo with experiments, comparisons, and analysis for MiPa. The visible history shows 11 commits, latest on Mar 28, 2026.",
+    image: ""
+  },
+  {
+    id: 4,
+    title: "MedTech",
+    date: "2026-03-25",
+    description: "No public description was exposed on GitHub.\nNotebook-only repo with a single visible notebook file.",
+    update: "Early-stage MedTech notebook repository with no README summary shown on the repo page. The visible history shows 1 commit, latest on Mar 25, 2026.",
+    image: ""
+  },
+  {
+    id: 5,
+    title: "Cancer-Detection-Model",
+    date: "2026-02-22",
+    description: "PyTorch implementation of a cancer detection model built from scratch using CNNs.\nFocuses on GPU-optimized training, RAM image caching, mixed precision, and model comparison.",
+    update: "Histopathology cancer detection pipeline with confidence-aware evaluation and a two-model CNN setup. The visible history shows 9 commits, latest on Feb 22, 2026.",
+    image: ""
+  },
+  {
+    id: 6,
+    title: "Route-Optimisation",
+    date: "2026-02-22",
+    description: "Real-time nearest hospital finder with shortest-path routing.\nDual implementation using Flask + OSMnx + NetworkX in Python and a from-scratch C++ Dijkstra engine.",
+    update: "Emergency routing project aimed at finding the nearest hospital and computing the fastest route. The visible history shows 7 commits, latest on Feb 22, 2026.",
+    image: ""
+  },
+  {
+    id: 7,
+    title: "SpotEase-Spotify-Widget-for-macOS",
+    date: "2026-02-22",
+    description: "Lightweight Spotify integration using the full OAuth 2.0 Authorization Code Flow via Flask.\nAutomatically refreshes tokens and retrieves real-time currently playing track data.",
+    update: "Two-file Python widget for Spotify login, token refresh, and now-playing tracking. The visible history shows 4 commits, latest on Feb 22, 2026.",
+    image: ""
+  },
+  {
+    id: 8,
+    title: "3D-Motion-Tracking-System",
+    date: "2026-01-10",
+    description: "Train Keras 3D motion tracking model using IMU measurements.\nConverts the model to TensorFlow Lite for deployment on Arduino microcontrollers.",
+    update: "Edge-AI gesture and motion tracking pipeline built for resource-constrained hardware. The visible history shows 4 commits, latest on Jan 10, 2026.",
+    image: ""
+  },
+  {
+    id: 9,
+    title: "Manhwa-agent",
+    date: "2025-11-28",
+    description: "Offline-first self-hosted dashboard for tracking a personalized reading list on Asura Scans.\nUses browser emulation, Docker, n8n, and a desktop widget for update delivery.",
+    update: "Automation-heavy manga/manhwa tracker with containerized scraping and persistent state handling. The visible history shows 13 commits, latest on Nov 28, 2025.",
+    image: ""
+  },
+  {
+    id: 10,
+    title: "Gesture-Controlled-UI-Navigation-Interface",
+    date: "2025-07-03",
+    description: "Real-time hand-gesture mouse control using webcam input.\nBuilt with Python, OpenCV, MediaPipe, and PyAutoGUI for touchless UI navigation.",
+    update: "Accessibility-focused gesture mouse interface with JSON calibration and low-latency recognition. The visible history shows 2 commits, latest on Jul 3, 2025.",
+    image: ""
   }
+]
   
 ];
