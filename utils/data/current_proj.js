@@ -5,7 +5,7 @@ export const currentProjects = [
     title: "Local Agent System Architecture",
     date: "May 9, 2026",
     description: "Architecting a production-ready local AI agent with a three-track execution system (Chat, Plan, Refuse). Utilizing a hybrid memory graph with SQLite for exact state retrieval and Chroma for semantic matching.",
-    update: "Currently implementing the orchestrator routing logic and finalizing the FastAPI bounded tool loops.",
+    update: "Changing and improving orchestrator logic with better structured output support to reduce incompatibility errors. Also planned to implement Vectorless RAG inspired Graph/Reasoning based vector memory storage for faster and efficient context retrieval.",
     image: "", // Leave empty ("") if you don't have an image for this project
   },
   {
@@ -13,7 +13,7 @@ export const currentProjects = [
     title: "Portfolio Refactoring - MPGA (Make Portfolio Great Again)",
     date: "May 10, 2026",
     description: "Upgrading my personal portfolio to a modern Next.js 13+ application with advanced UI/UX, glassmorphism effects, and dynamic data rendering.",
-    update: "Implemented horizontally scrollable live-project timelines and refactored the experience section.",
+    update: "Implemented horizontally scrollable live-project timelines and refactored the experience section. Big updates to about section and also added recent internship experience.",
     image: "/image/portfolio.png", 
   },
   {
@@ -29,7 +29,7 @@ export const currentProjects = [
     title: "AI-Agent",
     date: "2026-05-07",
     description: "Built multi agentic system from scratch with local LLM models using LM Studio server.\nUses web search, semantic search, Gmail and Google Calendar API integration.",
-    update: "Security-oriented OpenClaw-style build with WhatsApp prompts and responses. The visible history shows 1 commit, starting with an initial commit on May 7, 2026.",
+    update: "Security-oriented OpenClaw-style build with WhatsApp prompts and responses. The original scope and idea is to have a news agent , email summarizer agent and a calender agent. Implementing google api and related architecture.",
     image: ""
   },
   {
@@ -37,23 +37,23 @@ export const currentProjects = [
     title: "Panda_Arts",
     date: "2026-04-05",
     description: "Panda Sleep Arts.\nFront-end repo with React/Vite assets and a portfolio-style structure.",
-    update: "Recent work focused on Hero and Work component refactors, project data updates, and background image handling. The visible history shows 41 commits, latest on Apr 5, 2026.",
+    update: "Recent work focused on Hero and Work component refactors, project data updates, and background image handling. Better formatting for this project out of love for pandas.",
     image: ""
   },
   {
     id: 13,
     title: "MiPa",
     date: "2026-03-28",
-    description: "Critique and improvement study of Mixed Patch visible-infrared object detection.\nCompares the paper’s training method across CNN and ViT backbones.",
-    update: "Research-oriented notebook/project repo with experiments, comparisons, and analysis for MiPa. The visible history shows 11 commits, latest on Mar 28, 2026.",
+    description: "Research paper Critique and improvement study of Mixed Patch visible-infrared object detection.\nCompares the paper’s training method across CNN and ViT backbones.",
+    update: "Experimented with additional comparisons, and analysis for MiPa. The paper misses detailed reasoning of many choices and my experiments showed improved performance using variable learning rate with cosine decay and other adaptive lr techniques. Also better performance using differnt sampling distributions compared to just using uniform like in the paper.",
     image: ""
   },
   {
     id: 4,
     title: "MedTech",
     date: "2026-03-25",
-    description: "No public description was exposed on GitHub.\nNotebook-only repo with a single visible notebook file.",
-    update: "Early-stage MedTech notebook repository with no README summary shown on the repo page. The visible history shows 1 commit, latest on Mar 25, 2026.",
+    description: "College project for making ML model on a cancer dataset given by AIIMS doctor. The dataset is curated by the doctor for prakriti analysis of patients and its correlation with cancer growth and treatment effects",
+    update: "Early-stage implementation of multiple ML models done. It is observed that signal is inherently leading to poor correlation between prakriti and patient's cancer stage. Further study with temporal data could prove to have an effect.",
     image: ""
   },
   {
@@ -61,7 +61,7 @@ export const currentProjects = [
     title: "Cancer-Detection-Model",
     date: "2026-02-22",
     description: "PyTorch implementation of a cancer detection model built from scratch using CNNs.\nFocuses on GPU-optimized training, RAM image caching, mixed precision, and model comparison.",
-    update: "Histopathology cancer detection pipeline with confidence-aware evaluation and a two-model CNN setup. The visible history shows 9 commits, latest on Feb 22, 2026.",
+    update: "Histopathology cancer detection pipeline with confidence-aware evaluation and a two-model CNN setup.",
     image: ""
   },
   {
@@ -69,7 +69,7 @@ export const currentProjects = [
     title: "Route-Optimisation",
     date: "2026-02-22",
     description: "Real-time nearest hospital finder with shortest-path routing.\nDual implementation using Flask + OSMnx + NetworkX in Python and a from-scratch C++ Dijkstra engine.",
-    update: "Emergency routing project aimed at finding the nearest hospital and computing the fastest route. The visible history shows 7 commits, latest on Feb 22, 2026.",
+    update: "Emergency routing project aimed at finding the nearest hospital and computing the fastest route.",
     image: ""
   },
   {
@@ -77,7 +77,7 @@ export const currentProjects = [
     title: "SpotEase-Spotify-Widget-for-macOS",
     date: "2026-02-22",
     description: "Lightweight Spotify integration using the full OAuth 2.0 Authorization Code Flow via Flask.\nAutomatically refreshes tokens and retrieves real-time currently playing track data.",
-    update: "Two-file Python widget for Spotify login, token refresh, and now-playing tracking. The visible history shows 4 commits, latest on Feb 22, 2026.",
+    update: "Two-file Python widget for Spotify login, token refresh, and now-playing tracking. Made this widget cause inbuilt mac os widget was not to my liking.",
     image: ""
   },
   {
@@ -85,7 +85,7 @@ export const currentProjects = [
     title: "3D-Motion-Tracking-System",
     date: "2026-01-10",
     description: "Train Keras 3D motion tracking model using IMU measurements.\nConverts the model to TensorFlow Lite for deployment on Arduino microcontrollers.",
-    update: "Edge-AI gesture and motion tracking pipeline built for resource-constrained hardware. The visible history shows 4 commits, latest on Jan 10, 2026.",
+    update: "Edge-AI gesture and motion tracking pipeline built for resource-constrained hardware.",
     image: ""
   },
   {
@@ -93,7 +93,7 @@ export const currentProjects = [
     title: "Manhwa-agent",
     date: "2025-11-28",
     description: "Offline-first self-hosted dashboard for tracking a personalized reading list on Asura Scans.\nUses browser emulation, Docker, n8n, and a desktop widget for update delivery.",
-    update: "Automation-heavy manga/manhwa tracker with containerized scraping and persistent state handling. The visible history shows 13 commits, latest on Nov 28, 2025.",
+    update: "Automation-heavy manga/manhwa tracker with containerized scraping and persistent state handling. It tracks and updates all my manhwas and gives me a single interface of app which directly has clickable links that takes manhwas from multiple sources. Improved my quality of life.",
     image: ""
   },
   {
@@ -101,7 +101,7 @@ export const currentProjects = [
     title: "Gesture-Controlled-UI-Navigation-Interface",
     date: "2025-07-03",
     description: "Real-time hand-gesture mouse control using webcam input.\nBuilt with Python, OpenCV, MediaPipe, and PyAutoGUI for touchless UI navigation.",
-    update: "Accessibility-focused gesture mouse interface with JSON calibration and low-latency recognition. The visible history shows 2 commits, latest on Jul 3, 2025.",
+    update: "Accessibility-focused gesture mouse interface with JSON calibration and low-latency recognition. The camera detects hand gestures and decides for navigation controls like selecting , close , open , drag and drop etc. Can be improved with potential use cases in VR products.",
     image: ""
   },
   {
