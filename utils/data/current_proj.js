@@ -103,5 +103,13 @@ export const currentProjects = [
     description: "Real-time hand-gesture mouse control using webcam input.\nBuilt with Python, OpenCV, MediaPipe, and PyAutoGUI for touchless UI navigation.",
     update: "Accessibility-focused gesture mouse interface with JSON calibration and low-latency recognition. The visible history shows 2 commits, latest on Jul 3, 2025.",
     image: ""
+  },
+  {
+    id: 14,
+    title: "Multi agentic system",
+    date: "2026-05-11",
+    description: "Local AI agent built from scratch with deployment ready professional architecture with multi agentic architecture with planner/worker/feedback models.",
+    update: "After Huge effort , I managed to get more robust tool calling and 3 modes of operation : chat , plan , refuse. Chat will only have conversational capabilities while plan will be agentic system with tool calling and refuse mode as safety fall back.\n This lets me have conversation and direct memory retrieval and answering capabilities without having to trigger worker model.",
+    image: ""
   }
 ];
