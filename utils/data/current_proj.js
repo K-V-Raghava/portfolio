@@ -24,7 +24,6 @@ export const currentProjects = [
     update: "Successfully implemented the news agent with tool calling and whatsapp interface for chat.",
     image: "",
   },
-  [
   {
     id: 11,
     title: "AI-Agent",
@@ -105,6 +104,4 @@ export const currentProjects = [
     update: "Accessibility-focused gesture mouse interface with JSON calibration and low-latency recognition. The visible history shows 2 commits, latest on Jul 3, 2025.",
     image: ""
   }
-]
-  
 ];
