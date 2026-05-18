@@ -111,5 +111,40 @@ export const currentProjects = [
     description: "Local AI agent built from scratch with deployment ready professional architecture with multi agentic architecture with planner/worker/feedback models.",
     update: "After Huge effort , I managed to get more robust tool calling and 3 modes of operation : chat , plan , refuse. Chat will only have conversational capabilities while plan will be agentic system with tool calling and refuse mode as safety fall back.\n This lets me have conversation and direct memory retrieval and answering capabilities without having to trigger worker model.",
     image: ""
+  },
+  
+  {
+    id: 15,
+    title: "Multi agent system",
+    date: "2026-05-18",
+    description: "Local AI agent built from scratch. Contains multi agentic architecture with planner/worker/feedback models with adaptive context scaling.",
+    update: "Architecture behaviour for simple prompts is correct with no fetching of unwanted context but an error has occured where the model is replying with its ability to answer a simple prompt but not the answer itself.",
+    image: ""
   }
+  // {
+  //   id: 16,
+  //   title: "",
+  //   date: "2026-05-11",
+  //   description: ".",
+  //   update: ".",
+  //   image: ""
+  // }
+  
+  // {
+  //   id: 17,
+  //   title: "",
+  //   date: "2026-05-11",
+  //   description: ".",
+  //   update: ".",
+  //   image: ""
+  // }
+  
+  // {
+  //   id: 18,
+  //   title: "",
+  //   date: "2026-05-11",
+  //   description: ".",
+  //   update: ".",
+  //   image: ""
+  // }
 ];
