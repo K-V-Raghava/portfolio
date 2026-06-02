@@ -147,4 +147,12 @@ export const currentProjects = [
   //   update: ".",
   //   image: ""
   // }
+  // {
+  //   id: 19,
+  //   title: "",
+  //   date: "2026-05-11",
+  //   description: ".",
+  //   update: ".",
+  //   image: ""
+  // }
 ];
