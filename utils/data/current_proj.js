@@ -136,19 +136,19 @@ export const currentProjects = [
     description: "Local AI agent built from scratch. Contains multi agentic architecture with planner/worker/feedback models with adaptive context scaling.",
     update: "Final metrics published: average inference latency 320ms, token usage optimized to 1.2K per simple query, tool calling success rate 94%. Video demo and GitHub code release pending.",
     image: ""
-  }
+  },
 
-  // {
-  //   id: 17,
-  //   title: "",
-  //   date: "2026-05-11",
-  //   description: ".",
-  //   update: ".",
-  //   image: ""
-  // }
+  {
+    id: 18,
+    title: "Local AI Agent System — Full Documentation & Portfolio Update",
+    date: "2026-06-22",
+    description: "Local AI agent built from scratch. Contains multi agentic architecture with planner/worker/feedback models with adaptive context scaling.",
+    update: "Successfully documented and published the complete architecture of the Graph-Augmented Multi-Agent Orchestrator. Built a fully custom Graph RAG from scratch — SQLite as a graph database with 13 tables, recursive CTE lineage traversal, cross-session entity edge linking, and token-budget-aware context assembly. Engineered Progressive Depth Escalation: a query-aware retrieval system where greetings skip history entirely while deep research questions trigger full BFS graph walks across sessions, entities, and summaries — three-tier fallback with 50+ keyword patterns ensures it never hard-fails. Achieved microsecond-level deterministic entity extraction using pure regex patterns with zero embeddings or LLM calls. Designed a hierarchical Level Summarizer that compresses each graph depth into summary paragraphs after every request, creating a memory pyramid stored in both SQLite and ChromaDB. Deployed 4 specialist agents (news, mail, calendar, task) with a manager-worker LLM architecture splitting Qwen 3.5 9B (routing, depth reasoning) from Qwen 3.5 2B (tool execution). Integrated a WhatsApp bridge with per-chat source-level memory isolation where every conversation gets its own independent graph, entity index, and vector collections. The entire system runs 100% locally via LM Studio — zero cloud dependency, zero data exfiltration. Performance: 320ms average inference latency, 94% tool calling success rate, 12-tool orchestration across 4 agents.",
+    image: ""
+  }
   
   // {
-  //   id: 18,
+  //   id: 19,
   //   title: "",
   //   date: "2026-05-11",
   //   description: ".",
@@ -156,7 +156,7 @@ export const currentProjects = [
   //   image: ""
   // }
   // {
-  //   id: 19,
+  //   id: 20,
   //   title: "",
   //   date: "2026-05-11",
   //   description: ".",
