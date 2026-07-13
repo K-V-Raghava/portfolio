@@ -333,33 +333,33 @@ export const projectsData = [
     id: 11,
     name: 'Local AI Agent System',
     slug: 'AI-Agent',
-    description: "A production-ready multi-agent system built from scratch with local LLMs (LM Studio). Features a three-track execution model (Chat, Plan, Refuse) with tool calling for web search, semantic search (Chroma), Gmail (read-only), Google Calendar, and SQLite memory. WhatsApp bridge interface with allowlisted chat isolation. All inference runs 100% locally — no cloud dependency.",
-    tools: ['Python', 'FastAPI', 'Node.js', 'Playwright', 'LM Studio', 'Chroma', 'SQLite', 'Docker'],
+    description: "A fully local, security-first multi-agent system with a custom Graph RAG memory architecture — built entirely from scratch on SQLite (13 tables, recursive CTEs), ChromaDB (4 collections), and local LLMs via LM Studio. Features Progressive Depth Escalation: per-query retrieval depth (0–3) where greetings use a shallow SQLite lookup and deep research questions trigger a full BFS graph walk across sessions, entities, and summaries. Includes deterministic regex-based entity extraction (microsecond-level, no embeddings), hierarchical level summarization creating a memory pyramid, and 4 specialist agents (news, mail, calendar, task) with manager-worker LLM separation (Qwen 3.5 9B/2B). All inference runs 100% locally — zero cloud dependency.",
+    tools: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'LM Studio', 'Qwen', 'MLX', 'ChromaDB', 'SQLite', 'Google APIs', 'Node.js', 'Playwright'],
     role: 'AI Systems Engineer',
     code: 'https://github.com/b23bb1023/AI-Agent',
     demo: '',
     image: '/image/AI-Agent.png',
     domain: 'AI/ML',
     highlights: [
-      'Architected three-track multi-agent system (Chat, Plan, Refuse) with local LLMs via LM Studio — zero cloud dependency',
-      'Implemented hybrid memory graph: SQLite for exact state retrieval + Chroma for semantic similarity matching',
-      'Built WhatsApp bridge with allowlisted chat isolation and prompt-driven structured output for robust tool calling',
-      'Integrated Gmail (read-only), Google Calendar, web search, and task management agents with security-scoped API boundaries'
+      'Architected custom Graph RAG from scratch — 13-table SQLite graph DAG with recursive CTEs, 4-collection ChromaDB vector store, cross-session entity edge linking, and token-budget-aware context assembly',
+      'Engineered Progressive Depth Escalation pipeline — per-query retrieval depth (0–3) with three-tier fallback (LLM → 50+ keyword patterns → safe default) and 4 strategy implementations (Broad, Focused, Exact, None)',
+      'Built microsecond-level deterministic entity extraction engine from regex patterns — no embedding model or LLM call required — with secondary LLM-based path for richer extraction when desired',
+      'Designed 4 specialist agents (news, mail, calendar, task) with structured tool-calling, manager-worker LLM separation (Qwen 3.5 9B/2B), and WhatsApp bridge with source-level memory isolation'
     ],
     features: [
-      { icon: 'brain', title: 'Three-Track Architecture', desc: 'Chat (direct response), Plan (multi-step reasoning), Refuse (safety rejection) — selectable per query based on intent classification' },
-      { icon: 'chip', title: '100% Local LLM', desc: 'All inference via LM Studio — zero cloud API calls. Supports any OpenAI-compatible local model with configurable parameters' },
-      { icon: 'network', title: 'Hybrid Memory Graph', desc: 'Dual memory: SQLite for exact conversation history + Chroma vector DB for semantic similarity retrieval across sessions' },
-      { icon: 'mobile', title: 'WhatsApp Bridge', desc: 'Allowlisted chat isolation with prompt-driven structured output parsing — WhatsApp Business API or personal bridge' },
-      { icon: 'code', title: 'Tool Calling System', desc: 'Web search (DuckDuckGo), Gmail (read-only), Google Calendar, task management — all via structured function calling' },
-      { icon: 'server', title: 'FastAPI Backend', desc: 'Async FastAPI server with SSE streaming, tool orchestration, and configurable agent routing per request' }
+      { icon: 'brain', title: 'Custom Graph RAG', desc: 'SQLite as a graph database — 13-table DAG with recursive CTE lineage traversal, entity extraction, cross-session edge linking, and hierarchical level summarization — no off-the-shelf RAG framework' },
+      { icon: 'layer', title: 'Progressive Depth Escalation', desc: 'Query-aware retrieval depth (0–3): greetings skip history (depth=0), lookups use shallow SQLite (depth=1), deep research triggers full BFS graph walk across sessions and entities (depth=3)' },
+      { icon: 'search', title: 'Deterministic Entity Extraction', desc: 'Regex-based person/email/topic/date detection in microseconds — no embedding model, no LLM call. Optional LLM-based path for richer extraction when needed' },
+      { icon: 'chip', title: '100% Local LLM Stack', desc: 'Qwen 3.5 (9B manager + 2B worker) via LM Studio on MLX — all inference, vector search, and graph storage run on-device. No cloud API calls' },
+      { icon: 'code', title: '4 Specialist Agents', desc: 'News (RSS/YouTube feeds), Mail (Gmail read-only), Calendar (read events + create), Task (full CRUD with deadlines) — structured tool-calling with up to 2 execution rounds' },
+      { icon: 'mobile', title: 'WhatsApp Bridge', desc: 'Node.js/Playwright bridge with source-level memory isolation — each chat gets its own independent graph DAG, entity index, level summaries, and vector collections' }
     ],
-    architecture: 'FastAPI backend routes incoming queries through intent classifier → selects execution track (Chat/Plan/Refuse). Chat track: direct LLM response with retrieval-augmented generation from hybrid memory (SQLite + Chroma). Plan track: multi-step reasoning with tool calling — web search, Gmail, Calendar, task management — each tool is a scoped API endpoint with its own security boundaries. Refuse track: safety classifier rejects out-of-scope queries. WhatsApp bridge translates messages to API calls with allowlist-based chat isolation. All models run locally via LM Studio OpenAI-compatible endpoint.',
+    architecture: 'FastAPI orchestrates a 6-step pipeline: (1) Intake — validate and normalize input. (2) Depth Reasoning — three-tier fallback (LLM → 50+ keyword patterns → safe default=depth=1) outputs a TraversalDirective with exact depth, scope, branch filter, and token budget. (3) Context Building — GraphMemoryRetriever facade executes the directive via 4 strategy implementations (Broad/Focused/Exact/None), assembling a priority-ordered ContextWindow with token-budget-aware section ordering (structured data first, then level summaries, graph history, FTS5 matches, semantic search, entity index). (4) Routing — Manager LLM classifies as chat/plan/refuse with 2-attempt retry. (5) Plan Dispatch — Worker LLM executes structured tool calls (up to 2 rounds) across specialist agents. (6) Post-processing — LevelSummarizer compresses each graph depth into summary paragraphs stored in both SQLite and ChromaDB, creating a memory pyramid. All models run locally via LM Studio OpenAI-compatible endpoint.',
     outcomes: [
-      { value: '3', label: 'Execution Tracks' },
-      { value: '100%', label: 'Local Inference' },
-      { value: '5', label: 'Integrated Tools' },
-      { value: '320ms', label: 'Avg Latency' }
+      { value: '13', label: 'SQLite Tables' },
+      { value: '4', label: 'ChromaDB Collections' },
+      { value: '4', label: 'Specialist Agents' },
+      { value: '100%', label: 'Local Inference' }
     ]
   },
 ];
