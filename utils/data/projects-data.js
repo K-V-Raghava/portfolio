@@ -1,6 +1,5 @@
 export const projectsData = [
   {
-    {
     id: 1,
     name: 'Local AI Agent System',
     slug: 'AI-Agent',
