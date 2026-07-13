@@ -7,5 +7,5 @@ export const personalData = {
   address: 'Hyd , Telangana',
   github: 'https://github.com/b23bb1023',
   linkedIn: 'https://www.linkedin.com/in/raghavakv/',
-  resume: "https://drive.google.com/file/d/1qxRxSUCx8H9bWsX-EqCm2OV8_NIijEBM/view?usp=drive_link"
+  resume: "https://drive.google.com/file/d/16BeGSVZ-uUrQyoBqDcs5Ue4secIDhEui/view?usp=sharing"
 }
