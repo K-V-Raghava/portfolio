@@ -338,7 +338,7 @@ export const projectsData = [
     role: 'AI Systems Engineer',
     code: 'https://github.com/b23bb1023/AI-Agent',
     demo: '',
-    image: '/image/AI-Agent.png',
+    image: '/image/image.png',
     domain: 'AI/ML',
     highlights: [
       'Architected custom Graph RAG from scratch — 13-table SQLite graph DAG with recursive CTEs, 4-collection ChromaDB vector store, cross-session entity edge linking, and token-budget-aware context assembly',
