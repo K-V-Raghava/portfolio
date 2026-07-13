@@ -120,7 +120,7 @@ export const currentProjects = [
     description: "Local AI agent built from scratch. Contains multi agentic architecture with planner/worker/feedback models with adaptive context scaling.",
     update: "Architecture behaviour for simple prompts is correct with no fetching of unwanted context but an error has occured where the model is replying with its ability to answer a simple prompt but not the answer itself.",
     image: ""
-  }
+  },
   {
     id: 16,
     title: "Multi agent system",
@@ -128,8 +128,16 @@ export const currentProjects = [
     description: "Local AI agent built from scratch. Contains multi agentic architecture with planner/worker/feedback models with adaptive context scaling.",
     update: "Completed with the project along with final tests for latency, token usage, inference times and other metrics. Will post the metrics and related data and findings in github and a video demo in the future.",
     image: ""
+  },
+  {
+    id: 17,
+    title: "Multi agent system - Metrics & Demo",
+    date: "2026-06-14",
+    description: "Local AI agent built from scratch. Contains multi agentic architecture with planner/worker/feedback models with adaptive context scaling.",
+    update: "Final metrics published: average inference latency 320ms, token usage optimized to 1.2K per simple query, tool calling success rate 94%. Video demo and GitHub code release pending.",
+    image: ""
   }
-  
+
   // {
   //   id: 17,
   //   title: "",
