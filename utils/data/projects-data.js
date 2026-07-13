@@ -1,6 +1,40 @@
 export const projectsData = [
   {
+    {
     id: 1,
+    name: 'Local AI Agent System',
+    slug: 'AI-Agent',
+    description: "A fully local, security-first multi-agent system with a custom Graph RAG memory architecture — built entirely from scratch on SQLite (13 tables, recursive CTEs), ChromaDB (4 collections), and local LLMs via LM Studio. Features Progressive Depth Escalation: per-query retrieval depth (0–3) where greetings use a shallow SQLite lookup and deep research questions trigger a full BFS graph walk across sessions, entities, and summaries. Includes deterministic regex-based entity extraction (microsecond-level, no embeddings), hierarchical level summarization creating a memory pyramid, and 4 specialist agents (news, mail, calendar, task) with manager-worker LLM separation (Qwen 3.5 9B/2B). All inference runs 100% locally — zero cloud dependency.",
+    tools: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'LM Studio', 'Qwen', 'MLX', 'ChromaDB', 'SQLite', 'Google APIs', 'Node.js', 'Playwright'],
+    role: 'AI Systems Engineer',
+    code: 'https://github.com/b23bb1023/AI-Agent',
+    demo: '',
+    image: '/image/image.png',
+    domain: 'AI/ML',
+    highlights: [
+      'Architected custom Graph RAG from scratch — 13-table SQLite graph DAG with recursive CTEs, 4-collection ChromaDB vector store, cross-session entity edge linking, and token-budget-aware context assembly',
+      'Engineered Progressive Depth Escalation pipeline — per-query retrieval depth (0–3) with three-tier fallback (LLM → 50+ keyword patterns → safe default) and 4 strategy implementations (Broad, Focused, Exact, None)',
+      'Built microsecond-level deterministic entity extraction engine from regex patterns — no embedding model or LLM call required — with secondary LLM-based path for richer extraction when desired',
+      'Designed 4 specialist agents (news, mail, calendar, task) with structured tool-calling, manager-worker LLM separation (Qwen 3.5 9B/2B), and WhatsApp bridge with source-level memory isolation'
+    ],
+    features: [
+      { icon: 'brain', title: 'Custom Graph RAG', desc: 'SQLite as a graph database — 13-table DAG with recursive CTE lineage traversal, entity extraction, cross-session edge linking, and hierarchical level summarization — no off-the-shelf RAG framework' },
+      { icon: 'layer', title: 'Progressive Depth Escalation', desc: 'Query-aware retrieval depth (0–3): greetings skip history (depth=0), lookups use shallow SQLite (depth=1), deep research triggers full BFS graph walk across sessions and entities (depth=3)' },
+      { icon: 'search', title: 'Deterministic Entity Extraction', desc: 'Regex-based person/email/topic/date detection in microseconds — no embedding model, no LLM call. Optional LLM-based path for richer extraction when needed' },
+      { icon: 'chip', title: '100% Local LLM Stack', desc: 'Qwen 3.5 (9B manager + 2B worker) via LM Studio on MLX — all inference, vector search, and graph storage run on-device. No cloud API calls' },
+      { icon: 'code', title: '4 Specialist Agents', desc: 'News (RSS/YouTube feeds), Mail (Gmail read-only), Calendar (read events + create), Task (full CRUD with deadlines) — structured tool-calling with up to 2 execution rounds' },
+      { icon: 'mobile', title: 'WhatsApp Bridge', desc: 'Node.js/Playwright bridge with source-level memory isolation — each chat gets its own independent graph DAG, entity index, level summaries, and vector collections' }
+    ],
+    architecture: 'FastAPI orchestrates a 6-step pipeline: (1) Intake — validate and normalize input. (2) Depth Reasoning — three-tier fallback (LLM → 50+ keyword patterns → safe default=depth=1) outputs a TraversalDirective with exact depth, scope, branch filter, and token budget. (3) Context Building — GraphMemoryRetriever facade executes the directive via 4 strategy implementations (Broad/Focused/Exact/None), assembling a priority-ordered ContextWindow with token-budget-aware section ordering (structured data first, then level summaries, graph history, FTS5 matches, semantic search, entity index). (4) Routing — Manager LLM classifies as chat/plan/refuse with 2-attempt retry. (5) Plan Dispatch — Worker LLM executes structured tool calls (up to 2 rounds) across specialist agents. (6) Post-processing — LevelSummarizer compresses each graph depth into summary paragraphs stored in both SQLite and ChromaDB, creating a memory pyramid. All models run locally via LM Studio OpenAI-compatible endpoint.',
+    outcomes: [
+      { value: '13', label: 'SQLite Tables' },
+      { value: '4', label: 'ChromaDB Collections' },
+      { value: '4', label: 'Specialist Agents' },
+      { value: '100%', label: 'Local Inference' }
+    ]
+  },
+  {
+    id: 2,
     name: 'Cancer-Detection-Model',
     slug: 'Cancer-Detection-Model',
     description: "A machine learning–based cancer detection model designed to analyze histopathology images to identify patterns indicative of malignant disease. The project compares two CNN architectures: a Baseline model (~4M parameters) with three dense layers and a smaller Advanced model (~1.5M parameters) using Global Average Pooling and dropout regularization. Despite having 2.6x fewer parameters, the Advanced model achieves higher validation accuracy (92% vs 83%) while being more memory-efficient and less prone to overfitting. The model leverages supervised learning to distinguish between cancerous and non-cancerous cases, enabling early detection, risk stratification, and decision support for clinicians.",
@@ -33,7 +67,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: 'Personal Portfolio',
     slug: 'portfolio-website',
     description: "A modern, high-performance developer portfolio built with Next.js 13+ App Router and Tailwind CSS. Features a responsive dark-themed design with glassmorphism effects, dynamic project showcases with letterboxed previews, a live project timeline tracking ongoing development, and integrated contact form. Deployed on Cloudflare Pages with Google Tag Manager analytics.",
@@ -66,7 +100,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: 'Route Optimisation (Google Maps Clone)',
     slug: 'Route-Optimisation',
     description: "A real-time route optimization algorithm integrated into a web-based application that computes the shortest and most efficient paths using live data. The system dynamically processes factors such as distance, travel time, and routing constraints to deliver optimal navigation results. Paired with a user-friendly interface and interactive map features comparable to Google Maps, it enables seamless route visualization, turn-by-turn guidance, and responsive updates to enhance usability and decision-making.",
@@ -99,7 +133,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     name: 'Manhwa Agent Bot',
     slug: 'Manhwa-agent',
     description: "An automated offline-first dashboard that tracks personalized reading lists from Asura Scans. Uses a Playwright-based browser emulation layer to detect new unread chapters and displays them in a Flet desktop widget. An n8n workflow orchestrates 6-hourly scans with Docker containerization, automatically opening new chapters in the browser.",
@@ -132,7 +166,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: 'Spotify Widget for macOS',
     slug: 'Spotify_Widget',
     description: "A learning-focused macOS widget that integrates with the Spotify Web API via OAuth 2.0 to display and control currently playing music. Built as a utility project to explore OAuth Authorization Code Flow, automatic token refresh mechanisms, and REST API integration patterns. The widget retrieves real-time playback state (track title, artist, album art, progress), enables play/pause/skip controls, and displays recently played tracks. Note: This is a learning/utility project exploring Spotify API integration patterns — not a production-grade macOS widget.",
@@ -165,7 +199,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 6,
+    id: 9,
     name: 'Gesture-Based Mouse Control',
     slug: 'Gesture',
     description: "A real-time touchless human-computer interaction system that uses a webcam to capture hand gestures and control mouse functions. The system recognizes a 5-gesture vocabulary — Cursor Control (open hand with index finger extended), Left Click (index-middle finger tap), Right Click (middle-ring finger tap), Drag & Drop (closed fist with movement), and Mission Control (all five fingers spread). A calibration system uses adaptive skin detection and background subtraction to work across different lighting conditions and skin tones. Achieves 94.7% recognition accuracy with 95-100ms end-to-end latency using a custom 5D nearest-neighbor classifier on MediaPipe hand landmarks.",
@@ -199,7 +233,7 @@ export const projectsData = [
   },
 
   {
-    id: 7,
+    id: 10,
     name: '3D Motion Tracking System',
     slug: '3D-Motion-Tracking-System',
     description: "End-to-end gesture recognition pipeline for Arduino Nano 33 BLE Sense using TensorFlow Lite Micro. Captures 6-axis IMU data at 100Hz, trains a Keras neural network (714→50→15→4), and deploys quantized TFLite inference in under 2ms on an ARM Cortex-M4 microcontroller with 92% accuracy across 4 gesture classes.",
@@ -231,7 +265,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     name: 'MiPa — Mixed Patch Object Detection',
     slug: 'MiPa',
     description: "A research critique and experimental reproduction of the WACV 2025 paper 'Mixed Patch Visible-Infrared Modality Agnostic Object Detection.' Implemented and compared 5 mixing-ratio distributions (Uniform, Beta(2,2), Beta(0.5,0.5), Truncated Uniform, Gaussian) across CNN (ResNet50-FPN) and ViT (Swin-Tiny) backbones for pedestrian detection on the LLVIP dataset. Key finding: Beta(2,2) consistently outperforms the paper's default Uniform(0,1) distribution — achieving +1.24% RGB AP50 improvement on CNN backbones. Note: Due to Kaggle GPU session constraints, CNN backbone results were partially saved; the ViT backbone experiments have complete result logs with consistent improvement across all mixing distributions.",
@@ -264,7 +298,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 9,
+    id: 11,
     name: 'Panda Sleep Studio Portfolio',
     slug: 'Panda_Arts',
     description: "A polished single-page portfolio website for 'Panda Sleep Studio' — a fictional creative agency blending sleep culture with design technology. Built with Vite + React 18 featuring GSAP scroll-triggered animations, custom lerp-based cursor system, Lenis smooth scrolling, video-on-hover project cards, CSS marquee banners, and full-screen slide-down drawers. Warm beige aesthetic with hand-written CSS (no frameworks).",
@@ -297,7 +331,7 @@ export const projectsData = [
     ]
   },
   {
-    id: 10,
+    id: 8,
     name: 'MedTech — Cancer QoL Prediction',
     slug: 'MedTech',
     description: "A machine learning project predicting Quality of Life (SF-36 scores) in Head & Neck Cancer patients by combining clinical/demographic data with Ayurvedic Prakriti (Vata/Pitta/Kapha) body constitution assessment. Engineered 142 features from 226 patient records including TNM staging, cancer site encoding, and 36 SF-36 quality-of-life indicators. Achieved R² = 0.88 using XGBoost regression with RandomForest baseline.",
@@ -329,37 +363,4 @@ export const projectsData = [
       { value: '3', label: 'Models Compared' }
     ]
   },
-  {
-    id: 11,
-    name: 'Local AI Agent System',
-    slug: 'AI-Agent',
-    description: "A fully local, security-first multi-agent system with a custom Graph RAG memory architecture — built entirely from scratch on SQLite (13 tables, recursive CTEs), ChromaDB (4 collections), and local LLMs via LM Studio. Features Progressive Depth Escalation: per-query retrieval depth (0–3) where greetings use a shallow SQLite lookup and deep research questions trigger a full BFS graph walk across sessions, entities, and summaries. Includes deterministic regex-based entity extraction (microsecond-level, no embeddings), hierarchical level summarization creating a memory pyramid, and 4 specialist agents (news, mail, calendar, task) with manager-worker LLM separation (Qwen 3.5 9B/2B). All inference runs 100% locally — zero cloud dependency.",
-    tools: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'LM Studio', 'Qwen', 'MLX', 'ChromaDB', 'SQLite', 'Google APIs', 'Node.js', 'Playwright'],
-    role: 'AI Systems Engineer',
-    code: 'https://github.com/b23bb1023/AI-Agent',
-    demo: '',
-    image: '/image/image.png',
-    domain: 'AI/ML',
-    highlights: [
-      'Architected custom Graph RAG from scratch — 13-table SQLite graph DAG with recursive CTEs, 4-collection ChromaDB vector store, cross-session entity edge linking, and token-budget-aware context assembly',
-      'Engineered Progressive Depth Escalation pipeline — per-query retrieval depth (0–3) with three-tier fallback (LLM → 50+ keyword patterns → safe default) and 4 strategy implementations (Broad, Focused, Exact, None)',
-      'Built microsecond-level deterministic entity extraction engine from regex patterns — no embedding model or LLM call required — with secondary LLM-based path for richer extraction when desired',
-      'Designed 4 specialist agents (news, mail, calendar, task) with structured tool-calling, manager-worker LLM separation (Qwen 3.5 9B/2B), and WhatsApp bridge with source-level memory isolation'
-    ],
-    features: [
-      { icon: 'brain', title: 'Custom Graph RAG', desc: 'SQLite as a graph database — 13-table DAG with recursive CTE lineage traversal, entity extraction, cross-session edge linking, and hierarchical level summarization — no off-the-shelf RAG framework' },
-      { icon: 'layer', title: 'Progressive Depth Escalation', desc: 'Query-aware retrieval depth (0–3): greetings skip history (depth=0), lookups use shallow SQLite (depth=1), deep research triggers full BFS graph walk across sessions and entities (depth=3)' },
-      { icon: 'search', title: 'Deterministic Entity Extraction', desc: 'Regex-based person/email/topic/date detection in microseconds — no embedding model, no LLM call. Optional LLM-based path for richer extraction when needed' },
-      { icon: 'chip', title: '100% Local LLM Stack', desc: 'Qwen 3.5 (9B manager + 2B worker) via LM Studio on MLX — all inference, vector search, and graph storage run on-device. No cloud API calls' },
-      { icon: 'code', title: '4 Specialist Agents', desc: 'News (RSS/YouTube feeds), Mail (Gmail read-only), Calendar (read events + create), Task (full CRUD with deadlines) — structured tool-calling with up to 2 execution rounds' },
-      { icon: 'mobile', title: 'WhatsApp Bridge', desc: 'Node.js/Playwright bridge with source-level memory isolation — each chat gets its own independent graph DAG, entity index, level summaries, and vector collections' }
-    ],
-    architecture: 'FastAPI orchestrates a 6-step pipeline: (1) Intake — validate and normalize input. (2) Depth Reasoning — three-tier fallback (LLM → 50+ keyword patterns → safe default=depth=1) outputs a TraversalDirective with exact depth, scope, branch filter, and token budget. (3) Context Building — GraphMemoryRetriever facade executes the directive via 4 strategy implementations (Broad/Focused/Exact/None), assembling a priority-ordered ContextWindow with token-budget-aware section ordering (structured data first, then level summaries, graph history, FTS5 matches, semantic search, entity index). (4) Routing — Manager LLM classifies as chat/plan/refuse with 2-attempt retry. (5) Plan Dispatch — Worker LLM executes structured tool calls (up to 2 rounds) across specialist agents. (6) Post-processing — LevelSummarizer compresses each graph depth into summary paragraphs stored in both SQLite and ChromaDB, creating a memory pyramid. All models run locally via LM Studio OpenAI-compatible endpoint.',
-    outcomes: [
-      { value: '13', label: 'SQLite Tables' },
-      { value: '4', label: 'ChromaDB Collections' },
-      { value: '4', label: 'Specialist Agents' },
-      { value: '100%', label: 'Local Inference' }
-    ]
-  },
-];
+  ];
